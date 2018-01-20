@@ -1,0 +1,41 @@
+var r = {
+	"Factorial0": {
+		"IF": [
+			"faktorial 0"
+		],
+		"THEN": [
+			"delete faktorial 0",
+			"add faktorial 0 je 1",
+			"message Faktorial 0 je 1"
+		]
+	},
+	"Factorial": {
+		"IF": [
+			"faktorial ?x", 
+			"<> ?x 0"
+		],
+		"THEN": [
+			"delete faktorial ?x",
+			"add medzivypocet ?x { ?x - 1 } ?x"
+		]
+	},
+	"Operation1": {
+		"IF": [
+			"medzivypocet ?x 0 ?y"
+		],
+		"THEN": [
+			"delete medzivypocet ?x 0 ?y",
+			"add faktorial ?x je ?y",
+			"message Faktorial ?x je ?y"
+		]
+	},
+	"Operation2": {
+		"IF": [
+			"medzivypocet ?x ?y ?z"
+		],
+		"THEN": [
+			"delete medzivypocet ?x ?y ?z",
+			"add medzivypocet ?x { ?y - 1 } { ?y * ?z }"
+		]
+	}
+}

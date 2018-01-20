@@ -1,0 +1,22 @@
+var f = [
+	"check apple in familie",
+	
+	"schwein means pig",
+	"schwein belongs to tier",
+	"check pig in tier",
+
+	"padre means vater",
+	"padre belongs to familia",
+	"familia means familie",
+	"check vater in familie",
+
+	"bed means cama",
+	"bed belongs to cuarto",
+	"armario belongs to cuarto",
+	"check mobel in casa",
+	"mobel means armario",
+	"postel means cama",
+	"cama means bett",
+	"cuarto belongs to casa",
+	"check bett in casa"
+]

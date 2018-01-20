@@ -1,0 +1,62 @@
+var r = {
+	"Category1": {
+		"IF": [
+			"?X means ?Y", 
+			"?Y belongs to ?Z", 
+			"<> ?X ?Z"
+		],
+		"THEN": [
+			"add ?X belongs to ?Z"
+		]
+	},
+	"Category2": {
+		"IF": [
+			"?X belongs to ?Y", 
+			"?Y means ?Z", 
+			"<> ?X ?Z"
+		],
+		"THEN": [
+			"add ?X belongs to ?Z"
+		]
+	},
+	"ChainCategory": {
+		"IF": [
+			"?X belongs to ?Y", 
+			"?Y belongs to ?Z", 
+			"<> ?X ?Z"
+		],
+		"THEN": [
+			"add ?X belongs to ?Z"
+		]
+	},
+	"Equivalence": {
+		"IF": [
+			"?X means ?Y", 
+			"<> ?X ?Y"
+		],
+		"THEN": [
+			"add ?Y means ?X"
+		]
+	},
+	"ChainEquivalence": {
+		"IF": [
+			"?X means ?Y", 
+			"?Y means ?Z", 
+			"<> ?X ?Z"
+		],
+		"THEN": [
+			"add ?X means ?Z"
+		]
+	},
+	"Check": {
+		"IF": [
+			"check ?X in ?Y", 
+			"?X belongs to ?Y", 
+			"<> ?X ?Y"
+		],
+		"THEN": [
+			"delete check ?X in ?Y", 
+			"message ?X is in ?Y"
+		]
+	}
+}

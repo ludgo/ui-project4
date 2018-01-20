@@ -1,0 +1,76 @@
+var r = {
+	"DruhyRodic1": {
+		"IF": [
+			"?X je rodic ?Y",
+			"manzelia ?X ?Z"
+		],
+		"THEN": [
+			"add ?Z je rodic ?Y"
+		]
+	},
+	"DruhyRodic2": {
+		"IF": [
+			"?X je rodic ?Y",
+			"manzelia ?Z ?X"
+		],
+		"THEN": [
+			"add ?Z je rodic ?Y"
+		]
+	},
+	"Otec": {
+		"IF": [
+			"?X je rodic ?Y",
+			"muz ?X"
+		],
+		"THEN": [
+			"add ?X je otec ?Y"
+		]
+	},
+	"Matka": {
+		"IF": [
+			"?X je rodic ?Y",
+			"zena ?X"
+		],
+		"THEN": [
+			"add ?X je matka ?Y"
+		]
+	},
+	"Surodenci": {
+		"IF": [
+			"?X je rodic ?Y",
+			"?X je rodic ?Z",
+			"<> ?Y ?Z"
+		],
+		"THEN": [
+			"add ?Y a ?Z su surodenci"
+		]
+	},
+	"Brat": {
+		"IF": [
+			"?Y a ?Z su surodenci",
+			"muz ?Y"
+		],
+		"THEN": [
+			"add ?Y je brat ?Z"
+		]
+	},
+	"Stryko": {
+		"IF": [
+			"?Y je brat ?Z",
+			"?Z je rodic ?X"
+		],
+		"THEN": [
+			"add ?Y je stryko ?X",
+			"message ?X ma stryka"
+		]
+	},
+	"Test mazania": {
+		"IF": [
+			"?Y je stryko ?X",
+			"zena ?X"
+		],
+		"THEN": [
+			"delete zena ?X"
+		]
+	}
+}
